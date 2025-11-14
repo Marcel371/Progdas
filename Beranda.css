@@ -15,7 +15,7 @@ body {
 
 /* === Navbar === */
 .navbar {
-    flex-direction: column;
+    flex-direction: row;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,7 +26,7 @@ body {
     z-index: 1000;
 }
 
-.navbar, .logo {
+.logo {
     color: #fff;
     font-size: 22px;
     font-weight: bold;
@@ -142,13 +142,6 @@ body {
     margin-bottom: 50px;
 }
 
-.testi-container {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
 .testi-card {
     background: white;
     width: 300px;
@@ -195,5 +188,6 @@ footer {
 #scrollTopBtn:hover {
     background-color: #005fcc;
 }
+
 
 
