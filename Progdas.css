@@ -1,3 +1,4 @@
+/* === Reset dasar === */
 * {
     margin: 0;
     padding: 0;
@@ -5,182 +6,171 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
+/* === Warna dasar & layout umum === */
 body {
-    background: #fff;
+    background-color: #ffffff;
     color: #333;
     line-height: 1.6;
 }
 
-/* Navbar */
+/* === Navbar === */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #0078ff;
     padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo {
+.navbar .logo {
     color: #fff;
+    font-size: 22px;
     font-weight: bold;
-    font-size: 1.5em;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    gap: 25px;
 }
 
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
+.nav-links li a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
+    transition: 0.3s;
 }
 
-.nav-links a:hover,
-.nav-links .active {
+.nav-links li a:hover {
     text-decoration: underline;
 }
 
-/* Hero Section */
+/* === Hero Section === */
 .hero {
-    text-align: center;
-    background: linear-gradient(to right, #0078ff, #00b7ff);
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
     color: white;
-    padding: 80px 20px;
+    text-align: center;
+    padding: 120px 20px;
 }
 
 .hero h1 {
-    font-size: 2.8em;
-    margin-bottom: 10px;
-}
-
-.hero h2 {
-    font-size: 2em;
+    font-size: 42px;
     margin-bottom: 15px;
-    padding: 20px 0;
-    margin: 20px 0;
-    border-top: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .hero p {
+    font-size: 18px;
     margin-bottom: 25px;
-    font-size: 1.2em;
 }
 
-.btn {
-    background: white;
-    color: #0078ff;
-    padding: 10px 25px;
-    border-radius: 25px;
+.hero .btn {
+    background-color: #0078ff;
+    color: white;
+    padding: 12px 30px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    border-radius: 25px;
+    transition: 0.3s;
 }
 
-.btn:hover {
-    background: #f2f2f2;
+.hero .btn:hover {
+    background-color: #005fcc;
 }
 
-/* Features Section (Layanan Kami) */
-.features {
+/* === Layanan Section === */
+.layanan {
+    padding: 80px 60px;
+    background: #f9f9f9;
     text-align: center;
-    padding: 30px 20px 60px; /* lebih dekat ke atas dan beri ruang bawah */
-    margin-top: -40px; /* tarik sedikit ke atas agar menempel dengan hero */
 }
 
-.features h2 {
+.layanan h2 {
+    font-size: 32px;
     color: #0078ff;
     margin-bottom: 50px;
-    padding: 30px 0;
 }
 
-.feature-container {
+.layanan-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 45px;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
-.feature-card {
-    background: #f9f9f9;
-    width: 280px;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+.card {
+    background: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
-.feature-card h3 {
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
     color: #0078ff;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-/* About Page */
-.about-page {
+.card p {
+    color: #555;
+}
+
+/* === Testimoni Section === */
+.testimoni {
+    background: #eef5ff;
+    padding: 80px 60px;
     text-align: center;
-    padding: 80px 20px;
-    margin: auto;
 }
 
-.about-page h1 {
+.testimoni h2 {
+    font-size: 32px;
     color: #0078ff;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
-.about-page .btn {
-    margin-top: 25px;
-}
-
-.about {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 18px;
-  line-height: 1.8;
-  color: #333;
-  text-align: justify;
-}
-
-
-/* Contact Page */
-.contact-page {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.contact-form {
+.testi-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 90%;
-    max-width: 400px;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.testi-card {
+    background: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Footer */
+.testi-card p {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.testi-card h4 {
+    color: #0078ff;
+}
+
+/* === Footer === */
 footer {
     background: #0078ff;
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 8px 0; /* kecil dan rapi */
+    padding: 15px 0;
+    margin-top: 60px;
     font-size: 14px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
-main {
-    margin-bottom: 60px; /* beri ruang agar footer tidak menimpa konten */
 }
 
 #scrollTopBtn {
@@ -198,5 +188,5 @@ main {
 }
 
 #scrollTopBtn:hover {
-    background-color: #005fcc;
+    background-color: #005fcc;
 }
