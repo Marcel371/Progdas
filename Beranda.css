@@ -15,6 +15,7 @@ body {
 
 /* === Navbar === */
 .navbar {
+    flex-direction: column;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,13 +26,14 @@ body {
     z-index: 1000;
 }
 
-.navbar .logo {
+.navbar, .logo {
     color: #fff;
     font-size: 22px;
     font-weight: bold;
 }
 
 .nav-links {
+    flex-direction: column;
     list-style: none;
     display: flex;
     gap: 25px;
@@ -41,7 +43,7 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    transition: 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .nav-links li a:hover {
@@ -76,7 +78,7 @@ body {
     text-decoration: none;
     font-weight: 600;
     border-radius: 25px;
-    transition: 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .hero .btn:hover {
@@ -96,7 +98,9 @@ body {
     margin-bottom: 50px;
 }
 
-.layanan-container {
+.layanan-container, .testi-container {
+    flex-direction: column;
+    align-items: center;
     display: flex;
     justify-content: center;
     gap: 25px;
@@ -190,3 +194,4 @@ footer {
 #scrollTopBtn:hover {
     background-color: #005fcc;
 }
+
